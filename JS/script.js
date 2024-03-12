@@ -30,7 +30,8 @@ createApp({
           description:'Superheroes unite, saving the world.',
         }
       ],
-      counter: 0
+      counter: 0,
+      forward: true,
     }
   },
   methods:{
@@ -42,9 +43,13 @@ createApp({
         this.counter = this.cards.length -1;
       }
     }
+  },  
+  mounted(){
+    setInterval(() => { 
+      this.goNext(this.forward);
+     }, 3000);
+  }
 
-
-  }  
 }).mount('#app');
 
 
