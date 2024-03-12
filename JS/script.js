@@ -32,6 +32,7 @@ createApp({
       ],
       counter: 0,
       forward: true,
+      isPlayerActive: true
     }
   },
   methods:{
@@ -46,7 +47,10 @@ createApp({
   },  
   mounted(){
     setInterval(() => { 
-      this.goNext(this.forward);
+      if(this.isPlayerActive){
+        this.goNext(this.forward);
+
+      }
      }, 3000);
   }
 
