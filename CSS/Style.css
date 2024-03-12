@@ -69,9 +69,11 @@ body{
   height: 20%;
   object-fit: cover;
   object-position: right;
-}
-.dark{
   opacity: 0.2;
+}
+.container-preview .active{
+  opacity: 1;
+  
 }
 
 .arrow{
