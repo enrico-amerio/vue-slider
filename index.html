@@ -14,7 +14,7 @@
 </head>
 <body>
   <div class="main-wrapper " id="app">
-    <div class="carosel" @mouseenter="isPlayerActive=false"  @mouseleave="isPlayerActive=true">
+    <div class="carosel" @mouseenter="isPlayerActive=false"  @mouseleave="isPlayerActive=true" @dblclick="forward = !forward">
       <div class="container-img">
         <img :src="cards[counter].photo" :alt="cards[counter].description" class="img">
         <h1 class="title">{{cards[counter].title}}</h1>
