@@ -10,22 +10,19 @@
   <link rel="stylesheet" href="CSS/Style.css">
 </head>
 <body>
-  
   <div class="main-wrapper " id="app">
     <div class="carosel">
       <div class="container-img">
         <img :src="cards[counter].photo" :alt="cards[counter].description" class="img">
       </div>
       <div class="container-preview">
-        <img v-for="(card, index) of cards":src="cards[index].photo" :alt="cards[index].description" class="img" :class="{'active': index === counter}">
+        <img v-for="(card, index) of cards":src="cards[index].photo" :alt="cards[index].description" class="img" :class="{'active': index === counter}" @click="counter = index">
         
         <div id="btn-up" class="arrow up" @click="goNext(false)"><i class="fa-solid fa-chevron-up"></i></div>
         <div id="btn-down" class="arrow down" @click="goNext(true)"><i class="fa-solid fa-chevron-down"></i></div>
       </div>
     </div>
   </div>
-
-
   <script src="JS/script.js"></script>
 </body>
 </html>
