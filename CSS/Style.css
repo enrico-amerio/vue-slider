@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 body{
- background: linear-gradient(-45deg, #155263, #ff6f3c, #ff9a3c, #ffc93c);;
+ background: linear-gradient(-45deg, #155263, #ff6f3c, #ff9a3c, #ffc93c);
+ font-family: "Roboto", sans-serif;
 }
 .debug{
   background-color: rgba(255, 0, 0, 0.5);
@@ -40,7 +41,7 @@ body{
   border-top-left-radius: 15px ;
   border-top-right-radius: 15px ;
 
-  bottom:28px;
+  bottom:29px;
   
 }
 .subtitle{

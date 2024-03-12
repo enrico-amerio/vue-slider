@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carosello</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css' integrity='sha512-tx5+1LWHez1QiaXlAyDwzdBTfDjX07GMapQoFTS74wkcPMsI3So0KYmFe6EHZjI8+eSG0ljBlAQc3PQ5BTaZtQ==' crossorigin='anonymous'/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
   <link rel="stylesheet" href="CSS/Style.css">
@@ -14,6 +17,8 @@
     <div class="carosel">
       <div class="container-img">
         <img :src="cards[counter].photo" :alt="cards[counter].description" class="img">
+        <h1 class="title">{{cards[counter].title}}</h1>
+        <p class="subtitle">{{cards[counter].description}}</p>
       </div>
       <div class="container-preview">
         <img v-for="(card, index) of cards":src="cards[index].photo" :alt="cards[index].description" class="img" :class="{'active': index === counter}" @click="counter = index">
